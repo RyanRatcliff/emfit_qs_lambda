@@ -1,0 +1,16 @@
+{
+  "name": "emfit-qs-data",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/app.js",
+    "transpile": "babel src --out-dir target/src",
+    "prebuild": "rm -rf target && mkdir -p target && yarn transpile && cp -r package.json target/ && cp -r src/* target/src/",
+    "build": "cd target && yarn --production && zip -r run.zip package.json node_modules src",
+    "build_docker": "docker build -t emfit_qs_lambda ."
+  },
+  "dependencies": {
+    "emfit-qs": "0.4.0",
+    "aws-sdk": "latest"
+  }
+}
