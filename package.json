@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node src/app.js",
     "transpile": "babel src --out-dir target/src",
     "prebuild": "rm -rf target && mkdir -p target && yarn transpile && cp -r package.json target/ && cp -r src/* target/src/",
     "build": "cd target && yarn --production && zip -r run.zip package.json node_modules src",
-    "build_docker": "docker build -t emfit_qs_lambda ."
+    "deploy-init": "cd deploy && cd terraform && terraform init",
+    "predeploy": "cd deploy && cd terraform && terraform plan",
+    "deploy": "cd deploy && cd terraform && terraform apply"
   },
   "dependencies": {
     "emfit-qs": "0.4.0",
