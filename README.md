@@ -12,3 +12,6 @@ A lamda that downloads data from the emfit qs api and stores the file in an S3 B
 * "yarn deploy-init" initializes terraform, you should only need to do this once
 * "yarn predeploy" an optional command to see what the deploy will do
 * "yarn deploy" executes the actual command to apply the terraform plan
+
+## Notes
+The file "deploy/terraform/terraform.tf" should be updated with the actual emfit qs username, password values along with the desired S3 bucket name
