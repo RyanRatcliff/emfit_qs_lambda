@@ -8,7 +8,8 @@
     "build": "cd target && yarn --production && zip -r run.zip package.json node_modules src",
     "deploy-init": "cd deploy && cd terraform && terraform init",
     "predeploy": "cd deploy && cd terraform && terraform plan",
-    "deploy": "cd deploy && cd terraform && terraform apply"
+    "deploy": "cd deploy && cd terraform && terraform apply",
+    "auto-deploy": "cd deploy && cd terraform && terraform -auto-approve apply"
   },
   "dependencies": {
     "emfit-qs": "0.4.0",
