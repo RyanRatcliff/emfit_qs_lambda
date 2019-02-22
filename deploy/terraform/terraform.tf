@@ -3,7 +3,7 @@ variable "emfit_user" {
 }
 
 variable "emfit_password" {
-  default = "password"
+  default = "mypassword"
 }
 
 variable "emfit_bucket" {
