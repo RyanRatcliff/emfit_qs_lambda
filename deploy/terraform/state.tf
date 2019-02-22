@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "mystatebaucket"
+    bucket = "mystatebucket"
     key    = "emfit-qs-lambda-state"
     region = "us-east-1"
   }
