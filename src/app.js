@@ -9,8 +9,9 @@ const s3 = new AWS.S3({
 let qs = new QS();
 
 exports.handler = function(event, context, callback) {
+    console.log('Started retrieval of latest sleep data');
     qs.login(process.env.EMFIT_USER, process.env.EMFIT_PASSWORD).then(function (data) {
-        console.log(data.device_settings.length + ' devices found for ' + data.user.email)
+        console.log(data.device_settings.length + ' devices found for ' + data.user.email);
 
 
         // get latest data for first device found
