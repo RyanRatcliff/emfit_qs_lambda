@@ -70,5 +70,6 @@ typings/
 .idea
 
 terraform.tf
+state.tf
 
 target/
