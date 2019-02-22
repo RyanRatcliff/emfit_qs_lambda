@@ -9,7 +9,7 @@
     "deploy-init": "cd deploy && cd terraform && terraform init",
     "predeploy": "cd deploy && cd terraform && terraform plan",
     "deploy": "cd deploy && cd terraform && terraform apply",
-    "auto-deploy": "cd deploy && cd terraform && terraform -auto-approve apply"
+    "auto-deploy": "cd deploy && cd terraform && terraform apply -auto-approve"
   },
   "dependencies": {
     "emfit-qs": "0.4.0",
