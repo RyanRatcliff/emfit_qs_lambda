@@ -7,7 +7,7 @@ variable "emfit_password" {
 }
 
 variable "emfit_bucket" {
-  default = "bucket"
+  default = "mybucket"
 }
 
 
