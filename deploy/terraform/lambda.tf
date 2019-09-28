@@ -3,7 +3,7 @@ resource "aws_lambda_function" "emfit_qs_lambda" {
   function_name    = "emfit_qs_lambda"
   role             = "${aws_iam_role.emfit_qs_lambda.arn}"
   handler          = "src/app.handler"
-  source_code_hash = "${base64sha256(file("../../target/run.zip"))}"
+  source_code_hash = "${filebase64sha256("../../target/run.zip")}"
   runtime          = "nodejs8.10"
   timeout          = 60
 

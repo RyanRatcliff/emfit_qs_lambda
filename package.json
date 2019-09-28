@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "emfit-qs": "0.4.0",
-    "aws-sdk": "latest"
+    "aws-sdk": "latest",
+    "lodash": "^4.17.15"
   }
 }
